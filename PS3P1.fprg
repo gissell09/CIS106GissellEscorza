@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 08:22:45 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROMFNWMjQ7MjAyMy0wOS0xNzswNzo1NzozNiBQTTszMzUy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROMFNWMjQ7MjAyMy0wOS0xNzswODoyMjo0NSBQTTsxOzM0NTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Exam1grade" type="Real" array="False" size=""/>
+            <declare name="Exam2grade" type="Real" array="False" size=""/>
+            <declare name="Examscore1" type="Real" array="False" size=""/>
+            <declare name="Examscore2" type="Real" array="False" size=""/>
+            <declare name="Totalpoints" type="Integer" array="False" size=""/>
+            <input variable="Exam1grade"/>
+            <input variable="Exam2grade"/>
+            <assign variable="Examscore1" expression="0.6 * Exam1grade"/>
+            <assign variable="Examscore2" expression="0.4 * exam2grade"/>
+            <assign variable="totalpoints" expression="examscore1 + examscore2"/>
+            <output expression="&quot;The total points are &quot; &amp; totalpoints" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

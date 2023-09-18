@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 09:35:50 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROMFNWMjQ7MjAyMy0wOS0xNzswOToxNzoyNSBQTTszMzQ4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROMFNWMjQ7MjAyMy0wOS0xNzswOTozNTo1MCBQTTsxOzM0NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="priceformeal" type="Real" array="False" size=""/>
+            <declare name="tip15alone" type="Real" array="False" size=""/>
+            <declare name="tip18alone" type="Real" array="False" size=""/>
+            <declare name="tip20alone" type="Real" array="False" size=""/>
+            <declare name="tip15total" type="Real" array="False" size=""/>
+            <declare name="tip18total" type="Real" array="False" size=""/>
+            <declare name="tip20total" type="Real" array="False" size=""/>
+            <input variable="priceformeal"/>
+            <assign variable="tip15alone" expression="priceformeal * 0.15"/>
+            <assign variable="tip18alone" expression="priceformeal * 0.18"/>
+            <assign variable="tip20alone" expression="priceformeal * 0.20"/>
+            <assign variable="tip15total" expression="tip15alone + priceformeal"/>
+            <assign variable="tip18total" expression="tip18alone + priceformeal"/>
+            <assign variable="tip20total" expression="tip20alone + priceformeal"/>
+            <output expression="&quot;With a 15% tip your total for the meal alone would be $&quot; &amp; priceformeal &amp; &quot;. Your tip amount would be $&quot; &amp; tip15alone &amp; &quot;. Your total for the meal and tip would be $&quot; &amp; tip15total &amp; &quot;.&quot;" newline="True"/>
+            <output expression="&quot;With a 18% tip your total for the meal alone would be $&quot; &amp; priceformeal &amp; &quot;. Your tip amount would be $&quot; &amp; tip18alone &amp; &quot;. Your total for the meal and tip would be $&quot; &amp; tip18total &amp; &quot;.&quot;" newline="True"/>
+            <output expression="&quot;With a 20% tip your total for the meal alone would be $&quot; &amp; priceformeal &amp; &quot;. Your tip amount would be $&quot; &amp; tip20alone &amp; &quot;. Your total for the meal and tip would be $&quot; &amp; tip20total &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
