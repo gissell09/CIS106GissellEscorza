@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 04:48:24 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAwS0VENk47MjAyMy0wOS0yNDswNDozMzozMSBQTTszMjk1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAwS0VENk47MjAyMy0wOS0yNDswNDo0ODoyNCBQTTsxOzM0MTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="unitprice" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="totalprice" type="Real" array="False" size=""/>
+            <input variable="quantity"/>
+            <if expression="quantity &gt;= 1000">
+                <then>
+                    <assign variable="unitprice" expression="3.00"/>
+                </then>
+                <else>
+                    <assign variable="unitprice" expression="5.00"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="quantity * unitprice"/>
+            <assign variable="tax" expression="extprice * 0.07"/>
+            <assign variable="totalprice" expression="extprice + tax"/>
+            <output expression="&quot;The quantity of this item is &quot; &amp; quantity &amp; &quot;. This makes the unit price $&quot; &amp; unitprice &amp; &quot;. The extended price is $&quot; &amp; extprice &amp; &quot; and the tax is $&quot; &amp; tax &amp; &quot;. This makes the total come out to be $&quot; &amp; totalprice &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 05:41:14 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAwS0VENk47MjAyMy0wOS0yNDswNDo0OTozMSBQTTszMzAy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAwS0VENk47MjAyMy0wOS0yNDswNTo0MToxNCBQTTsxOzM0MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="numofdependents" type="Real" array="False" size=""/>
+            <declare name="grossincome" type="Real" array="False" size=""/>
+            <declare name="AGI" type="Real" array="False" size=""/>
+            <declare name="taxrate" type="Real" array="False" size=""/>
+            <declare name="incometax" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="numofdependents"/>
+            <input variable="grossincome"/>
+            <assign variable="AGI" expression="grossincome - (numofdependents * 12000)"/>
+            <if expression="AGI &gt; 50000">
+                <then>
+                    <assign variable="taxrate" expression="0.2"/>
+                </then>
+                <else>
+                    <assign variable="taxrate" expression="0.1"/>
+                </else>
+            </if>
+            <assign variable="incometax" expression="AGI * taxrate"/>
+            <if expression="incometax &lt; 0">
+                <then>
+                    <assign variable="incometax" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="lastname &amp; &quot; has a total of &quot; &amp; numofdependents &amp; &quot; dependents. They have also have a gross income of $&quot; &amp; grossincome &amp; &quot;. This means that their adjusted gross income is $&quot; &amp; AGI &amp; &quot;. This also means they have an income tax of $&quot; &amp; incometax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
