@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 06:57:39 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5BVjhDN0U7MjAyMy0xMC0wODswMjowMTo0NSBQTTszMzIz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5BVjhDN0U7MjAyMy0xMC0wODswMjoxNjo1NiBQTTsxOzM0Mzk="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTZJSE5SSjc7MjAyMy0xMC0wODswNjo1NzozOSBQTTsxOzM0NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="examscore1" type="Real" array="False" size=""/>
+            <declare name="examscore2" type="Real" array="False" size=""/>
+            <declare name="averagescore" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to compute your average exam score? (yes or no)?&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response = &quot;yes&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;Enter student last name:&quot;" newline="True"/>
+                <input variable="lastname"/>
+                <output expression="&quot;Enter exam score 1:&quot;" newline="True"/>
+                <input variable="examscore1"/>
+                <output expression="&quot;Enter exam score 2:&quot;" newline="True"/>
+                <input variable="examscore2"/>
+                <assign variable="averagescore" expression="(examscore1 + examscore2) /2"/>
+                <output expression="&quot;Student &quot; &amp; lastname &amp; &quot; has an average score of &quot; &amp; averagescore" newline="True"/>
+                <output expression="&quot;Do you want to compute your average exam score? (yes or no)?&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;Number of students who entered data: &quot; &amp; counter" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
