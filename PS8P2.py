@@ -1,6 +1,6 @@
 def fib(n):
   fib(20)
-n=20
+n=20sn
 fn=1
 sn=1
 print(n)
